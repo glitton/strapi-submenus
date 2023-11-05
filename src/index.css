@@ -464,7 +464,6 @@ Submenu
     background: var(--white);
     border-radius: var(--borderRadius);
     padding: 2rem;
-
     transform: rotateX(-90deg) translateX(-50%);
     transform-origin: top;
     perspective: 1000px;
@@ -472,12 +471,13 @@ Submenu
     visibility: hidden;
     opacity: 0;
     transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out;
-    /* border: 2px solid red; */
+    z-index: -1;
   }
   .show-submenu {
     opacity: 1;
     visibility: visible;
     transform: rotateX(0deg) translate(-50%);
+    z-index: 10;
   }
   .submenu h5 {
     margin-bottom: 1rem;
